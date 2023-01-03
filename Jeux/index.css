@@ -21,8 +21,8 @@ body {
     padding-right: 5%;
     padding-top: 3%;
     padding-bottom: 3%;
-    border-style: solid;
-    border-color: darkblue;
+    border-style: dotted;
+    border-color: rgb(0, 37, 139);
     border-radius: 100%;
 }
 .grille {
