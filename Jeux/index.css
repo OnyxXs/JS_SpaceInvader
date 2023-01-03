@@ -1,9 +1,30 @@
-.sect1 {
-    display: flex;
-    flex-direction: column;
-    -ms-flex-align: center;
+body {
+    background: url(https://t4.ftcdn.net/jpg/03/90/22/93/360_F_390229338_frGUxS6LBVQjxGJD7FYaSlsnfqGQgnyB.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+.sect1 {
+    color: white;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    background-color: rgb(5, 12, 60);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-style: solid;
+    border-color: darkblue;
+    border-radius: 100%;
+}
 .grille {
-    background-image:url (.ressources/background.png);
+    background-image: url(https://s.france24.com/media/display/2107c834-1008-11e9-8cb8-005056a964fe/w:1280/p:1x1/hubble-icare.jpg) ;
 }
