@@ -33,5 +33,15 @@ const bloc = document.createElement('div');
         if (incr==20){
             incr=0;
         }
- console.log(i);
+ //console.log(i);
 }
+
+//obtenir tous les elements de la grille
+const touteslesdivs=Divs= document.querySelectorAll(".grille div");
+
+//class des div aliens 
+aliens.forEach(invader => {
+    touteslesdivs[invader].classList.add('alien');
+})
+
+console.log(aliens);
