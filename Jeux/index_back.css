@@ -25,6 +25,7 @@ body {
     border-color: rgb(0, 37, 139);
     border-radius: 100%;
 }
+
 .grille {
     background-image: url(./ressources/background.png) ;
 }

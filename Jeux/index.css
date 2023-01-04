@@ -10,6 +10,26 @@
     animation: background-defile 5s linear infinite;
 }
 
+body {
+    background: url(https://t4.ftcdn.net/jpg/03/90/22/93/360_F_390229338_frGUxS6LBVQjxGJD7FYaSlsnfqGQgnyB.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.score {
+    color: white;
+    background-color: rgb(5, 12, 60);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-style: dotted;
+    border-color: rgb(0, 37, 139);
+    border-radius: 100%;
+    margin-right: 32%;
+    margin-left: 32%;
+}
+
 @keyframes background-defile {
     from {
         background-position-y: 0px;
@@ -21,7 +41,6 @@
 
 h3 {
     text-align: center;
-    margin: 20px 0;
 }
 .grille div {
     width: 25px;
@@ -29,7 +48,6 @@ h3 {
 }
 .tireur {
     background: url(./ressources/vaisseau.png);
-    transform: rotate(180deg);
     background-position: center;
     background-size: contain;
 }
@@ -42,5 +60,7 @@ h3 {
     background-color: red;
 }
 .laser {
-    background-color: orange;
+    background: url(./ressources/BalleLaser.png);
+    background-position: center;
+    background-size: contain;
 }
