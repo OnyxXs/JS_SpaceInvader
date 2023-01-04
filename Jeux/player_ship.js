@@ -33,22 +33,26 @@ function checkKey(e) {
     if (e.keyCode == '38') {
         // Haut
         touteslesdivs[tireurPosition - 20].classList.add('tireur');
-        tireurPosition-= 20;
+        touteslesdivs[tireurPosition].classList.remove('tireur');
+        tireurPosition -= 20;
     }
     else if (e.keyCode == '40') {
         // Bas
         touteslesdivs[tireurPosition + 20].classList.add('tireur');
-        tireurPosition+= 20;
+        touteslesdivs[tireurPosition].classList.remove('tireur');
+        tireurPosition += 20;
     }
     else if (e.keyCode == '37') {
         // Gauche
         touteslesdivs[tireurPosition - 1].classList.add('tireur');
-        tireurPosition-= 1;
+        touteslesdivs[tireurPosition].classList.remove('tireur');
+        tireurPosition -= 1;
     }
     else if (e.keyCode == '39') {
         // Droite
         touteslesdivs[tireurPosition + 1].classList.add('tireur');
-        tireurPosition+= 1;
+        touteslesdivs[tireurPosition].classList.remove('tireur');
+        tireurPosition += 1;
     }
   
 }
