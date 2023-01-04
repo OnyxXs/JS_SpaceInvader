@@ -16,6 +16,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Audiowide';
 }
 
 .score {
@@ -24,7 +25,7 @@ body {
     padding-top: 3%;
     padding-bottom: 3%;
     border-style: dotted;
-    border-color: rgb(35, 39, 48);
+    border-color: rgb(255, 255, 255);
     border-radius: 100%;
     margin-right: 32%;
     margin-left: 32%;
