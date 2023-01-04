@@ -26,25 +26,29 @@ function Player(tireurPosition) {
 
   document.onkeydown = checkKey;
 
-  function checkKey(e) {
+function checkKey(e) {
   
-      e = e || window.event;
+    e = e || window.event;
   
-      if (e.keyCode == '38') {
-          // Haut
-          console.log("Haut")
-      }
-      else if (e.keyCode == '40') {
-          // Bas
-          console.log("Bas")
-      }
-      else if (e.keyCode == '37') {
-         // Gauche
-         console.log("Gauche")
-      }
-      else if (e.keyCode == '39') {
-         // Droite
-         console.log("Droite")
-      }
+    if (e.keyCode == '38') {
+        // Haut
+        touteslesdivs[tireurPosition - 20].classList.add('tireur');
+        tireurPosition-= 20;
+    }
+    else if (e.keyCode == '40') {
+        // Bas
+        touteslesdivs[tireurPosition + 20].classList.add('tireur');
+        tireurPosition+= 20;
+    }
+    else if (e.keyCode == '37') {
+        // Gauche
+        touteslesdivs[tireurPosition - 1].classList.add('tireur');
+        tireurPosition-= 1;
+    }
+    else if (e.keyCode == '39') {
+        // Droite
+        touteslesdivs[tireurPosition + 1].classList.add('tireur');
+        tireurPosition+= 1;
+    }
   
-  }
+}
