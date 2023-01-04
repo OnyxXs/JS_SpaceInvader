@@ -49,7 +49,7 @@ h3 {
     height: 25px;
 }
 .tireur {
-    background: url(./ressources/vaisseau.png);
+    background: url(./ressources/VaisseauPlayer.png);
     background-position: center;
     background-size: contain;
 }

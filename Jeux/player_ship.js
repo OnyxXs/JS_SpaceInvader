@@ -1,6 +1,6 @@
-function Player(position) {
+function Player(tireurPosition) {
 
-    this.pos = position;
+    this.pos = tireurPosition;
     
     this.moveUp = function() {
         this.pos[1] -= 20;
@@ -32,15 +32,19 @@ function Player(position) {
   
       if (e.keyCode == '38') {
           // Haut
+          console.log("Haut")
       }
       else if (e.keyCode == '40') {
           // Bas
+          console.log("Bas")
       }
       else if (e.keyCode == '37') {
          // Gauche
+         console.log("Gauche")
       }
       else if (e.keyCode == '39') {
          // Droite
+         console.log("Droite")
       }
   
   }

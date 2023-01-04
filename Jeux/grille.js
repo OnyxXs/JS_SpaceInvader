@@ -1,5 +1,6 @@
 var container = document.querySelector(".grille");
 var incr = 0;
+var tireurPosition = 229;
 
 //initialisation tableau des aliens
 var aliens = [];
@@ -45,3 +46,4 @@ aliens.forEach(invader => {
 })
 
 console.log(aliens);
+touteslesdivs[tireurPosition].classList.add('tireur');
