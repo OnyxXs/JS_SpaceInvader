@@ -8,6 +8,7 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     background: url(ressources/background.png);
     animation: background-defile 5s linear infinite;
+    box-shadow: 0px 0px 50px rgb(13, 92, 220);
 }
 
 body {
