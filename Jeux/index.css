@@ -11,7 +11,7 @@
 }
 
 body {
-    background: url(https://t4.ftcdn.net/jpg/03/90/22/93/360_F_390229338_frGUxS6LBVQjxGJD7FYaSlsnfqGQgnyB.jpg) no-repeat center center fixed; 
+    background: url(https://img.freepik.com/photos-premium/texture-ardoise-noir-gris-fonce-haute-resolution-fond-mur-pierre-noire-naturelle_38607-306.jpg?w=360) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,11 +20,11 @@ body {
 
 .score {
     color: white;
-    background-color: rgb(5, 12, 60);
+    background-color: rgb(25, 26, 30);
     padding-top: 3%;
     padding-bottom: 3%;
     border-style: dotted;
-    border-color: rgb(0, 37, 139);
+    border-color: rgb(35, 39, 48);
     border-radius: 100%;
     margin-right: 32%;
     margin-left: 32%;
