@@ -71,3 +71,4 @@ for (i=1; i<53; i++){
 
     // Ajout vaisseau joueur
     touteslesdivs[tireurPosition].classList.add('tireur');
+    document.getElementById('idUnique').innerHTML = aliens.length;
