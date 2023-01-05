@@ -1,4 +1,5 @@
 let container = document.querySelector(".grille");
+let direction = 1;
 var incr = 0;
 const aliens = [];
 
@@ -52,7 +53,8 @@ for (i=1; i<53; i++){
         touteslesdivs[invader].classList.add('alien');
     })
     //console.log(aliens);
-
+    var fromLeft     = true;
+    var fromRight    = true;
 
     // fonction déplacement toute les secondes grace à setintervalle +  for sur les aliens pour modifier leurs valeurs (+ 1)
     function deplacement(){
@@ -61,8 +63,32 @@ for (i=1; i<53; i++){
         })
 
         for(i=0;i<aliens.length;i++){
-            aliens[i]= aliens[i]+1;
+            if (touteslesdivs[aliens[i]].classList.contains('end')){
+                if (fromLeft == true){
+                    direction = 20;
+                    fromLeft = false;
+                    }
+                else {
+                    direction = -1;
+                    fromLeft = true;
+                }
+          }
+          if (touteslesdivs[aliens[i]].classList.contains('start')){
+            if (fromRight == true){
+                direction = 20;
+                fromRight = false;
+                }
+            else {
+                direction = +1;
+                fromRight = true;
+            }
+      }
         }
+
+        for(i=0;i<aliens.length;i++){
+            aliens[i]+=direction;
+        }
+
         aliens.forEach(invader => {
             touteslesdivs[invader].classList.add('alien');
         })
