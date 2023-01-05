@@ -98,7 +98,9 @@ for (i=1; i<53; i++){
     function Compteur_ennemy(){
         document.getElementById('idUnique').innerHTML = aliens.length;
     }
-
+    if (Compteur_ennemy == 0){
+        alert("Félicitation ! Vous avez vaincu l'ennemi !");
+    }
     // Ajout vaisseau joueur
     touteslesdivs[tireurPosition].classList.add('tireur');
 
