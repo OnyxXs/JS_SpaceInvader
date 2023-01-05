@@ -32,9 +32,14 @@ function checkKey(e) {
   
     if (e.keyCode == '38') {
         // Haut
-        touteslesdivs[tireurPosition - 20].classList.add('tireur');
-        touteslesdivs[tireurPosition].classList.remove('tireur');
         tireurPosition -= 20;
+        if (tireurPosition < 180){
+            tireurPosition += 20;
+        }
+        else{
+            touteslesdivs[tireurPosition].classList.add('tireur');
+            touteslesdivs[tireurPosition + 20].classList.remove('tireur');
+        }
     }
     else if (e.keyCode == '40') {
         // Bas
@@ -44,9 +49,14 @@ function checkKey(e) {
     }
     else if (e.keyCode == '37') {
         // Gauche
-        touteslesdivs[tireurPosition - 1].classList.add('tireur');
-        touteslesdivs[tireurPosition].classList.remove('tireur');
         tireurPosition -= 1;
+        if (tireurPosition < 180){
+            tireurPosition += 1;
+        }
+        else{
+            touteslesdivs[tireurPosition].classList.add('tireur');
+            touteslesdivs[tireurPosition + 1].classList.remove('tireur');
+        }
     }
     else if (e.keyCode == '39') {
         // Droite
