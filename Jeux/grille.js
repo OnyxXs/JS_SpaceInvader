@@ -1,27 +1,29 @@
-var container = document.querySelector(".grille");
+let container = document.querySelector(".grille");
 var incr = 0;
+const aliens = [];
+
+// Position départ joueur
 var tireurPosition = 229;
 
 //initialisation tableau des aliens
-var aliens = [];
 var incr = 0;
 for (i=1; i<53; i++){
-   if (i >= 1 && i<=12){
-    aliens.push(i);
+    if (i >= 1 && i<=12){
+        aliens.push(i);
     } 
     if (i >= 21 && i<=32){
-    aliens.push(i);
+        aliens.push(i);
     } 
     if (i >= 41 && i<=52){
         aliens.push(i);
     }
+    console.log(aliens);
 }
-console.log(aliens);
 
-//Création de la grille  
-for (let i=0; i<240; i++){
-const bloc = document.createElement('div');
-            
+    
+    for (let i=0; i<240; i++){
+        const bloc = document.createElement('div');
+                    
         if (incr==0) {
             bloc.className = 'start';
         }
@@ -34,16 +36,38 @@ const bloc = document.createElement('div');
         if (incr==20){
             incr=0;
         }
- //console.log(i);
-}
+         //console.log(i);
+    }
+    
+        
+    //obtenir tous les elements de la grille
+    const touteslesdivs=Divs= document.querySelectorAll(".grille div");
+    
+    aliens.forEach((alien) => {
+        console.log(alien);
+        alien = 0;
+    });
+    //class des div aliens 
+    aliens.forEach(invader => {
+        touteslesdivs[invader].classList.add('alien');
+    })
+    //console.log(aliens);
 
-//obtenir tous les elements de la grille
-const touteslesdivs=Divs= document.querySelectorAll(".grille div");
 
-//class des div aliens 
-aliens.forEach(invader => {
-    touteslesdivs[invader].classList.add('alien');
-})
+    // fonction déplacement toute les secondes grace à setintervalle +  for sur les aliens pour modifier leurs valeurs (+ 1)
+    function deplacement(){
+        aliens.forEach(invader => {
+            touteslesdivs[invader].classList.remove('alien');
+        })
 
-console.log(aliens);
-touteslesdivs[tireurPosition].classList.add('tireur');
+        for(i=0;i<aliens.length;i++){
+            aliens[i]= aliens[i]+1;
+        }
+        aliens.forEach(invader => {
+            touteslesdivs[invader].classList.add('alien');
+        })
+    }
+    setInterval(deplacement, 1000);
+
+    // Ajout vaisseau joueur
+    touteslesdivs[tireurPosition].classList.add('tireur');
