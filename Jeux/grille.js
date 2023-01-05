@@ -67,10 +67,14 @@ for (i=1; i<53; i++){
             touteslesdivs[invader].classList.add('alien');
         })
     }
-    setInterval(deplacement, 1000);
+
+    // Compteur
+    function Compteur_ennemy(){
+        document.getElementById('idUnique').innerHTML = aliens.length;
+    }
 
     // Ajout vaisseau joueur
     touteslesdivs[tireurPosition].classList.add('tireur');
 
-    // Compteur
-    document.getElementById('idUnique').innerHTML = aliens.length;
+    setInterval(deplacement, 1000);
+    setInterval(Compteur_ennemy,1000);
