@@ -53,6 +53,12 @@ function checkKey(e) {
         if (tireurPosition < 180){
             tireurPosition += 1;
         }
+        else if (tireurPosition == 199){
+            tireurPosition += 1;
+        }
+        else if (tireurPosition == 219){
+            tireurPosition += 1;
+        }
         else{
             touteslesdivs[tireurPosition].classList.add('tireur');
             touteslesdivs[tireurPosition + 1].classList.remove('tireur');
@@ -60,9 +66,20 @@ function checkKey(e) {
     }
     else if (e.keyCode == '39') {
         // Droite
-        touteslesdivs[tireurPosition + 1].classList.add('tireur');
-        touteslesdivs[tireurPosition].classList.remove('tireur');
         tireurPosition += 1;
+        if (tireurPosition == 200){
+            tireurPosition -= 1;
+        }
+        else if (tireurPosition == 220){
+            tireurPosition -= 1;
+        }
+        else if (tireurPosition == 240){
+            tireurPosition -= 1;
+        }
+        else{
+            touteslesdivs[tireurPosition].classList.add('tireur');
+            touteslesdivs[tireurPosition - 1].classList.remove('tireur');
+        }
     }
   
 }
