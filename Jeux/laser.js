@@ -38,6 +38,7 @@ function deleteLaserAtPosition(position) {
 
 function deleteAlienAtPosition(position) {
     deleteClassAtPosition(position, ALIEN_CLASS);
+    aliens = aliens.filter(el => el !== position);
 }
 
 function hasClassAtPosition(position, classname) {
@@ -92,4 +93,4 @@ function checkHits() {
     console.log("dead")
 }
 
-setInterval(avancerMissiles, 500)
+setInterval(avancerMissiles, 100)

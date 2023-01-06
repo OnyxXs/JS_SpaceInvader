@@ -1,7 +1,7 @@
 let container = document.querySelector(".grille");
 let direction = 1;
 var incr = 0;
-const aliens = [];
+let aliens = [];
 
 // Position départ joueur
 var tireurPosition = 229;
@@ -119,5 +119,5 @@ for (i=1; i<53; i++){
     touteslesdivs[tireurPosition].classList.add('tireur');
 
 
-    invaderId = setInterval(deplacement, 1000);
-    setInterval(Compteur_ennemy,1000);  
+    invaderId = setInterval(deplacement, 500);
+    setInterval(Compteur_ennemy,500);  
