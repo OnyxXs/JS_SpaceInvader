@@ -92,7 +92,7 @@ for (i=1; i<53; i++){
                 clearInterval(invaderId);
                 console.log("fin de jeu")
                 //faire le game over    
-                const reponse = confirm("Voulez vous rejouer ?");
+                const reponse = confirm("Vous avez perdu ! Voulez vous rejouer ?");
     
                 if (reponse) {
                     window.location.reload();
