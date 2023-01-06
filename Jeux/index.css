@@ -48,6 +48,10 @@ h3 {
     width: 25px;
     height: 25px;
 }
+.bouton {
+    text-decoration: none;
+    color: black;
+}
 .tireur {
     background: url(./ressources/VaisseauPlayer.png);
     background-position: center;
