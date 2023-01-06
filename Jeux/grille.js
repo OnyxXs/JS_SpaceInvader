@@ -89,11 +89,18 @@ for (i=1; i<53; i++){
             aliens[i]+=direction;
             if ( aliens[i] == tireurPosition){
                 touteslesdivs[tireurPosition].classList.remove('tireur');
-              clearInterval(invaderId);
-
-//faire le game over
-
-             }
+                clearInterval(invaderId);
+                console.log("fin de jeu")
+                //faire le game over    
+                const reponse = confirm("Voulez vous rejouer ?");
+    
+                if (reponse) {
+                    window.location.reload();
+                } else {
+                    alert("Cancel was pressed");
+                }
+                
+            }
         }
 
         aliens.forEach(invader => {
@@ -113,4 +120,4 @@ for (i=1; i<53; i++){
 
 
     invaderId = setInterval(deplacement, 1000);
-    setInterval(Compteur_ennemy,1000);
+    setInterval(Compteur_ennemy,1000);  
