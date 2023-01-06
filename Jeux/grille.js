@@ -56,7 +56,7 @@ for (i=1; i<53; i++){
     var fromLeft     = true;
     var fromRight    = true;
 
-    // fonction déplacement toute les secondes grace à setintervalle +  for sur les aliens pour modifier leurs valeurs (+ 1)
+   // fonction déplacement toute les secondes grace à setintervalle +  for sur les aliens pour modifier leurs valeurs (+ 1)
     function deplacement(){
         aliens.forEach(invader => {
             touteslesdivs[invader].classList.remove('alien');
@@ -87,6 +87,13 @@ for (i=1; i<53; i++){
 
         for(i=0;i<aliens.length;i++){
             aliens[i]+=direction;
+            if ( aliens[i] == tireurPosition){
+                touteslesdivs[tireurPosition].classList.remove('tireur');
+              clearInterval(invaderId);
+
+//faire le game over
+
+             }
         }
 
         aliens.forEach(invader => {
@@ -104,5 +111,6 @@ for (i=1; i<53; i++){
     // Ajout vaisseau joueur
     touteslesdivs[tireurPosition].classList.add('tireur');
 
-    setInterval(deplacement, 1000);
+
+    invaderId = setInterval(deplacement, 1000);
     setInterval(Compteur_ennemy,1000);
